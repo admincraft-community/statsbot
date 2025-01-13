@@ -489,7 +489,7 @@ func main() {
 
     // Create Discord session
     logger.Info("Creating Discord session...")
-    dg, err := discordgo.New("Bot " + "MTMyODMxMTY0NjQwOTQ2MTgyMg.GAPSxO.eoFjaR0haaifRYDlS1OrmGdIfcedP1fx5UCOEY")
+    dg, err := discordgo.New("Bot " + os.Getenv("DISCORD_TOKEN"))
     if err != nil {
         logger.Error("Failed to create Discord session: %v", err)
         os.Exit(1)
