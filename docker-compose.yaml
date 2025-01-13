@@ -4,6 +4,4 @@ services:
       dockerfile: Dockerfile
     container_name: "StatsBot"
     environment:
-      - DISCORD_TOKEN=<token goes here>
-    ports:
-      - 2112:2112
+      - DISCORD_TOKEN=<token>

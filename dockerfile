@@ -8,4 +8,8 @@ RUN go build -o statsbot main.go
 FROM cgr.dev/chainguard/wolfi-base:latest
 WORKDIR /app
 COPY --from=builder /app/statsbot .
+
+LABEL org.opencontainers.image.source="https://github.com/admincraft-community/statsbot"
+LABEL org.opencontainers.image.description="A metrics tracking bot for the Admincraft discord"
+
 CMD ["./statsbot"]
